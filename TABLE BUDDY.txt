@@ -1,0 +1,8 @@
+create table "CHAT".buddy
+(
+ user1   VARCHAR2(255),
+ user2   VARCHAR2(255),
+constraint pk_buddy primary key(user1,user2),
+constraint fk_buddy_user1 foreign key(user1) references "XY".chatuser(username),
+constraint fk_buddy_user2 foreign key(user2) references "XY".chatuser(username)
+);

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "简单聊天软件", "WpfApp5\简单聊天软件.csproj", "{3B0FA02D-A871-4389-B20D-AA44842A3FF1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "Setup2\Setup2.vdproj", "{111B910B-B62A-4EAE-BD0A-FBD9642D1D68}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup3", "Setup3\Setup3.vdproj", "{6F9EDFBE-A473-4B28-908D-6FE639395820}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B0FA02D-A871-4389-B20D-AA44842A3FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0FA02D-A871-4389-B20D-AA44842A3FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0FA02D-A871-4389-B20D-AA44842A3FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0FA02D-A871-4389-B20D-AA44842A3FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111B910B-B62A-4EAE-BD0A-FBD9642D1D68}.Debug|Any CPU.ActiveCfg = Debug
+		{111B910B-B62A-4EAE-BD0A-FBD9642D1D68}.Release|Any CPU.ActiveCfg = Release
+		{6F9EDFBE-A473-4B28-908D-6FE639395820}.Debug|Any CPU.ActiveCfg = Debug
+		{6F9EDFBE-A473-4B28-908D-6FE639395820}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {114343CF-E0D1-43EB-9C44-3627D261CF40}
+	EndGlobalSection
+EndGlobal

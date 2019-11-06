@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B0FA02D-A871-4389-B20D-AA44842A3FF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp5</RootNamespace>
+    <AssemblyName>WpfApp5</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\..\..\..\Desktop\WpfTimQQ-master\packages\CommonServiceLocator.2.0.4\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLibDummy, Version=0.9.4345.22792, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Package.1.0\lib\net40\MyLibDummy.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism">
+      <HintPath>..\..\..\..\Desktop\WpfTimQQ-master\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\..\..\Desktop\WpfTimQQ-master\packages\Prism.Wpf.7.1.0.431\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Buddy.cs" />
+    <Compile Include="ViewModes\MainWindowViewModes.cs" />
+    <Compile Include="ChatWindow.xaml.cs">
+      <DependentUpon>ChatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindow.xaml.cs">
+      <DependentUpon>InfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfileWindow.xaml.cs">
+      <DependentUpon>EditProfileWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditProfileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App1.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ControlzEx.BadgedEx.datasource" />
+    <None Include="Properties\DataSources\ControlzEx.PackIconBase.datasource" />
+    <None Include="Properties\DataSources\ControlzEx.PopupEx.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignColors.Hue.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignColors.Swatch.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignColors.SwatchesProvider.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Badged.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ButtonProgressAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Card.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Chip.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Clock.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ClockChoiceMadeEventArgs.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ClockChoiceMadeEventHandler.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ClockItemButton.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ColorZone.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ColorZoneAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ComboBoxAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ComboBoxPopup.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.BooleanToVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.BrushRoundConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.BrushToRadialGradientBrushConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CalendarDateCoalesceConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CardClipConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.ArcEndPointConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.ArcSizeConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.LargeArcConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.RotateTransformCentreConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.RotateTransformConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.CircularProgressBar.StartPointConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.ClockLineConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.DrawerOffsetConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.EqualityToVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.HintProxyFabricConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.ListViewGridViewConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.MathConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.MathMultipleConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.NotConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.NotZeroConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.NotZeroToVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.NullableDateTimeToCurrentDateConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.NullableToVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.PointValueConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.RangeLengthConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.RangePositionConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.ShadowConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.ShadowEdgeConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.SnackbarMessageTypeConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.TextFieldHintVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Converters.TimeToVisibilityConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.CustomPopupPlacementCallbackHelper.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DataGridAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogClosingEventArgs.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogClosingEventHandler.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogHost.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogHostEx.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogOpenedEventArgs.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogOpenedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DialogSession.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.DrawerHost.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Flipper.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.HintAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.HintProxyFabric.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Icon.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.IHintProxy.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ISnackbarMessageQueue.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ListBoxAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ListSortDirectionIndicator.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ListViewAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.MaterialDataGridComboBoxColumn.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.MaterialDataGridTextColumn.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.MaterialDateDisplay.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.MessageQueueExtension.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.PackIcon.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.PackIconExtension.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Palette.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.PaletteHelper.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Plane3D.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.PopupBox.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.RatingBar.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.RatingBarButton.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Ripple.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.RippleAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ScaleHost.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ShadowAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.SmartHint.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Snackbar.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.SnackbarMessage.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.SnackbarMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.SnackbarMessageQueue.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Spelling.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.TextFieldAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ThemeAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.TimePicker.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ToggleButtonAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ToolTipAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.CircleWipe.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.FadeWipe.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.IndexedItemOffsetMultiplierExtension.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.ITransitionEffect.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.ITransitionEffectSubject.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.ITransitionWipe.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.IZIndexController.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.SlideOutWipe.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.SlideWipe.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionEffect.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionEffectBase.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionEffectExtension.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionEffectTypeConverter.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.Transitioner.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitionerSlide.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitioningContent.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Transitions.TransitioningContentBase.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.TreeViewAssist.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.Underline.datasource" />
+    <None Include="Properties\DataSources\MaterialDesignThemes.Wpf.ValidationAssist.datasource" />
+    <None Include="Properties\DataSources\XamlGeneratedNamespace.GeneratedInternalTypeHelper.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\timg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\timg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ngu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\github.png" />
+    <Resource Include="Images\head1.jpg" />
+    <Resource Include="Images\head2.jpg" />
+    <Resource Include="Images\head3.jpg" />
+    <Resource Include="Images\head4.jpg" />
+    <Resource Include="Images\head5.jpg" />
+    <Resource Include="Images\head6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\account-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Winicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\fileimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\parrot_128px_1167500_easyicon.net.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
